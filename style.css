@@ -1,0 +1,133 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 99%);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  width: 99vw;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 25rem;
+  background-color: var(--very-light-gray);
+}
+.header {
+  max-width: 20rem;
+  text-align: center;
+
+  margin: 3rem 0;
+  color: var(--grayish-blue);
+}
+.header h1 {
+  font-weight: 200;
+}
+.header h2,
+.header h1 {
+  margin: 0;
+  color: var(--very-dark-blue);
+  font-size: 1.5rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 20rem;
+  grid-template-rows: 15rem 15rem 15rem 15rem;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.card article {
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem var(--grayish-blue);
+  border-radius: 0.5rem;
+  color: var(--very-dark-blue);
+  padding: 2rem;
+  transition: 0.5s;
+}
+.card article:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.function {
+  margin: 0;
+}
+.description {
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+}
+img {
+  float: right;
+}
+.supervisor-card {
+  border-top: 0.3rem solid var(--cyan);
+}
+.teambuilder-card {
+  border-top: 0.3rem solid var(--red);
+}
+.karma-card {
+  border-top: 0.3rem solid var(--orange);
+}
+.calculator-card {
+  border-top: 0.3rem solid var(--blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--very-light-gray);
+  font-weight: 400;
+}
+.attribution:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.attribution a {
+  color: var(--orange);
+}
+@media screen and (min-width: 1000px) {
+  main {
+    min-width: 100vw;
+  }
+  .header {
+    min-width: 30rem;
+  }
+  .header h2,
+  .header h1 {
+    transform: scale(1.25);
+  }
+  .card {
+    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-rows: 5.5rem 5.5rem 5.5rem 5.5rem;
+  }
+  .supervisor-card {
+    grid-area: 2/1/4/2;
+  }
+  .teambuilder-card {
+    grid-area: 1/2/3/3;
+  }
+  .karma-card {
+    grid-area: 3/2/5/3;
+  }
+  .calculator-card {
+    grid-area: 2/3/4/4;
+  }
+}
